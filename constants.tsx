@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { User, Story, Post } from './types';
+import { User, Story, Post, Reel } from './types';
 
 // Mock Users
 export const users: User[] = [
@@ -10,10 +10,11 @@ export const users: User[] = [
   { id: 4, username: 'pixelperfect', avatar: 'https://picsum.photos/seed/user4/100/100' },
   { id: 5, username: 'naturelover', avatar: 'https://picsum.photos/seed/user5/100/100' },
   { id: 6, username: 'urbanexplorer', avatar: 'https://picsum.photos/seed/user6/100/100' },
+  { id: 7, username: 'videovirtuoso', avatar: 'https://picsum.photos/seed/user7/100/100' },
 ];
 
 // Mock Stories
-export const stories: Story[] = users.map((user, index) => ({
+export const stories: Story[] = users.slice(0, 6).map((user, index) => ({
   id: user.id,
   user: user,
   viewed: index > 2,
@@ -59,6 +60,19 @@ export const posts: Post[] = [
   },
 ];
 
+// Mock Reels
+export const reels: Reel[] = [
+  {
+    id: 1,
+    user: users[6],
+    videoUrl: 'https://storage.googleapis.com/web-dev-assets/video-and-source-tags/chrome.mp4',
+    caption: 'Just vibing with the city sounds. #cityscape #reels',
+    likes: 15203,
+    comments: 289,
+    shares: 742,
+  },
+];
+
 // SVG Icons
 export const HomeIcon = ({ className }: { className?: string }) => (
   <svg className={className} xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
@@ -70,6 +84,13 @@ export const ExploreIcon = ({ className }: { className?: string }) => (
   <svg className={className} xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
     <path strokeLinecap="round" strokeLinejoin="round" d="M6 12L3.269 3.126A59.768 59.768 0 0121.485 12 59.77 59.77 0 013.27 20.876L5.999 12zm0 0h7.5" />
   </svg>
+);
+
+export const ReelsIcon = ({ className }: { className?: string }) => (
+    <svg className={className} xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
+      <path strokeLinecap="round" strokeLinejoin="round" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+      <path strokeLinecap="round" strokeLinejoin="round" d="M15.91 11.672a.375.375 0 010 .656l-5.603 3.113a.375.375 0 01-.557-.328V8.887c0-.286.307-.466.557-.327l5.603 3.112z" />
+    </svg>
 );
 
 export const AddIcon = ({ className }: { className?: string }) => (

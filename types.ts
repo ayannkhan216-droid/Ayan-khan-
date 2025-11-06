@@ -26,3 +26,13 @@ export interface Post {
   comments: Comment[];
   timestamp: string;
 }
+
+export interface Reel {
+  id: number;
+  user: User;
+  videoUrl: string;
+  caption: string;
+  likes: number;
+  comments: number;
+  shares: number;
+}

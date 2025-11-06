@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { HomeIcon, ExploreIcon, AddIcon, users } from '../constants';
+import { HomeIcon, ExploreIcon, AddIcon, users, ReelsIcon } from '../constants';
 
 const BottomNav: React.FC = () => {
   return (
@@ -16,10 +16,7 @@ const BottomNav: React.FC = () => {
           <AddIcon className="w-8 h-8" />
         </button>
         <button className="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-pistaa-dark-3 transition-colors">
-            {/* Placeholder for notifications or another icon */}
-             <svg xmlns="http://www.w3.org/2000/svg" className="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
-                <path strokeLinecap="round" strokeLinejoin="round" d="M15.536 8.464a5 5 0 010 7.072m2.828-9.9a9 9 0 010 12.728M5.636 5.636a9 9 0 0112.728 0m-12.728 0a5 5 0 017.072 0" />
-            </svg>
+            <ReelsIcon className="w-7 h-7" />
         </button>
         <button className="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-pistaa-dark-3 transition-colors">
           <img src={users[0].avatar} alt="Profile" className="w-7 h-7 rounded-full border-2 border-pistaa-mint" />
